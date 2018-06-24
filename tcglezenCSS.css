@@ -1,0 +1,36 @@
+.header-container { 
+	position: fixed; 
+	top: 0; 
+	left: 0;
+	
+	width: 100%;
+	font-size: 150%;
+	
+	
+	background-color: rgb(0, 0, 0); 
+	
+	color: rgb(255, 0, 0);
+}
+
+#header-padding { 
+
+	padding: 5px; 
+} 
+
+.header-item { 
+
+	/*
+	font-size: 200%
+	
+	*/
+	display: inline; 
+	padding-right: 25px; 
+}
+
+
+	a:link {color: #F60;}
+	a:visited {color: #900;}
+	a:hover {color: #F33;} 
+	a:active {color:#B2F511;}
+
+
