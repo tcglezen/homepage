@@ -1,0 +1,16 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "My homepage",
+  "main": "httpserver.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node httpserver.js"
+  },
+  "author": "Thomas Glezen",
+  "license": "ISC"
+}
