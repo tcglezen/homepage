@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Rabbits, Cats, and Dogs</title>
+      <title>Bunnies, Cats, and Dogs</title>
 	  <link rel="stylesheet" href="cdStyle.css">
     </head>
   
@@ -9,12 +9,37 @@
     
     <h1>Intro!</h1> 
 	
-	<p>This is going to be a bunch of <br> 
-	rabbit, cats, and dog photos!<br> 
-	but not yet... give it a few days for <br> 
-	this to be uploaded. </p> 
+	<p>I don't have any bunny pictures yet. <br> 
+So currently, bunny button leads to cat picutres.	</p> 
+
+<p> Do note that there is a little problem with quality control, <br> 
+but oh well. At least all pictures have constant height. </p>
 	
 	
+	<button onclick = "document.getElementById('pet picture').src
+= 'Pictures/cat' + random(6) +'.jpg'">Cat Picture!</button> 
+	<button onclick = "document.getElementById('pet picture').src
+= 'Pictures/dog' + random(6) + '.jpg'">Dog Picture!</button> 
+	<button onclick = "document.getElementById('pet picture').src
+= 'Pictures/cat1.jpg'">Bunny Picture!</button>  <br> <br> <br>
+	
+	<img src="Pictures/cat1.jpg" alt ="Pls send pictures of your pets."
+	id = "pet picture" height = "500">
+	<br><br>
+	
+	<script>
+	function random(r) {
+		var d = new Date();
+		var n = d.getTime();
+		return n%r;
+		}
+	</script>
+	
+	
+	
+	
+	<a href = "http://www.tcglezen.com">
+	Click here to go back to home page. </a> 
    	  
     </body>
 </html>
