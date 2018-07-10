@@ -35,6 +35,10 @@
 	padding: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
 	a:link {color: #F60;}
 	a:visited {color: #900;}
 	a:hover {color: #F33;} 
