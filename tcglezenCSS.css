@@ -10,11 +10,14 @@
 	width: 100%;
 	font-size: 150%;
 	
-	
 	background-color: rgb(0, 0, 0); 
 	
 	color: rgb(255, 0, 0);
 	text-align: left;
+}
+
+.topics { 
+	padding-top: 5px;
 }
 
 #header-padding { 
@@ -23,10 +26,6 @@
 } 
 
 .header-item { 
-
-	/*
-	font-size: 200%
-	*/
 	display: inline; 
 	padding-right: 10px; 
 	text-align: left;; 
@@ -35,7 +34,6 @@
 .picLinks {
 	padding: 10px;
 }
-
 
 	a:link {color: #F60;}
 	a:visited {color: #900;}
