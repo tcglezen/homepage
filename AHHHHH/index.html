@@ -37,6 +37,9 @@ but oh well. At least all pictures have constant height. </p>
 		}
 	
 	function newRand(result, total) {
+		if (total == 0 || total == 1) {
+			return result;
+		}
 	    while (old == result) {
 	        result = random(total); 
 		}
