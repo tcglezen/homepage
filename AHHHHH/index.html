@@ -9,19 +9,16 @@
     
     <h1>Intro!</h1> 
 	
-	<p>I don't have any bunny pictures yet. <br> 
-So currently, bunny button leads to cat picutres.	</p> 
-
-<p> Do note that there is a little problem with quality control, <br> 
-but oh well. At least all pictures have constant height. </p>
+	<p>Pls help expand this collection by sending me  <br> 
+	pictures of your pets. Thanks</p>
 	
 	
 	<button onclick = "document.getElementById('pet picture').src
-= 'Pictures/cat' + newRand(random(5), 5) +'.jpg'">Cat Picture!</button> 
+= 'Pictures/cat' + newRand(5) +'.jpg'">Cat Picture!</button> 
 	<button onclick = "document.getElementById('pet picture').src
-= 'Pictures/dog' + newRand(random(4), 4) + '.jpg'">Dog Picture!</button> 
+= 'Pictures/dog' + newRand(7) + '.jpg'">Dog Picture!</button> 
 	<button onclick = "document.getElementById('pet picture').src
-= 'Pictures/bunny' + newRand(random(1), 1) + '.jpg'">Bunny Picture!</button>  <br> <br> <br>
+= 'Pictures/bunny' + newRand(1) + '.jpg'">Bunny Picture!</button>  <br> <br> <br>
 	
 	<img src="Pictures/cat1.jpg" alt ="Pls send pictures of your pets."
 	id = "pet picture" height = "500">
@@ -36,12 +33,19 @@ but oh well. At least all pictures have constant height. </p>
 		return n%r;
 		}
 	
-	function newRand(result, total) {
+	function newRand(total) {
 		if (total == 0 || total == 1) {
-			return result;
+			return 0;
 		}
+		
+		var d = new Date();
+		var n = d.getTime(); 
+		var result = n % total;
+		
 	    while (old == result) {
-	        result = random(total); 
+			d = new Date(); 
+			n = d.getTime();
+			result = n % total;
 		}
 	    
 	    old = result; 
