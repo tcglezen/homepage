@@ -2,60 +2,31 @@
 <html>
     <head>
       <title>Bunnies, Cats, and Dogs</title>
+      <!-- The style sheet disappeaered... wtf -->
 	  <link rel="stylesheet" href="cdStyle.css">
-	  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+	  <!--<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>-->
+    <script src="functions.js"></script>
     </head>
-  
-    <body style = "background-color : aliceblue; text-align: center;">
-    
-    <h1>Intro!</h1> 
-	
-	<p>Pls help expand this collection by sending me  <br> 
-	pictures of your pets. Thanks</p>
-	
-	
-	<button onclick = "document.getElementById('pet picture').src
-= 'Pictures/cat' + newRand(5) +'.jpg'">Cat Picture!</button> 
-	<button onclick = "document.getElementById('pet picture').src
-= 'Pictures/dog' + newRand(7) + '.jpg'">Dog Picture!</button> 
-	<button onclick = "document.getElementById('pet picture').src
-= 'Pictures/bunny' + newRand(1) + '.jpg'">Bunny Picture!</button>  <br> <br> <br>
-	
-	<img src="Pictures/cat1.jpg" alt ="Pls send pictures of your pets."
-	id = "pet picture" height = "500">
-	<br><br>
-	
-	<script>
-	var old = 0;
-	
-	function random(r) {
-		var d = new Date();
-		var n = d.getTime();
-		return n%r;
-		}
-	
-	function newRand(total) {
-		if (total == 0 || total == 1) {
-			return 0;
-		}
-		
-		var d = new Date();
-		var n = d.getTime(); 
-		var result = n % total;
-		
-	    while (old == result) {
-			d = new Date(); 
-			n = d.getTime();
-			result = n % total;
-		}
-	    
-	    old = result; 
-		return result;
-	}
-	</script>
 
-	<a href = "http://www.tcglezen.com">
-	<button>
-	Click here to go back to home page</button></a> 
+    <body style="background-color:aliceblue; text-align:center;">
+
+    <h1>Intro!</h1>
+
+	<p>Pls help expand this collection by sending me<br>
+	pictures of your pets. Thanks</p>
+
+	<button onclick="document.getElementById('pet picture').src
+= 'Pictures/cat'+newRand(5)+'.jpg'">Cat Picture!</button>
+	<button onclick="document.getElementById('pet picture').src
+= 'Pictures/dog'+newRand(7)+'.jpg'">Dog Picture!</button>
+	<button onclick="document.getElementById('pet picture').src
+= 'Pictures/bunny'+newRand(1)+'.jpg'">Bunny Picture!</button><br><br><br>
+	<img src="Pictures/cat1.jpg" alt ="Pls send pictures of your pets."
+	id="pet picture" height="500">
+	<br><br>
+
+	<a href="http://www.tcglezen.com">
+	  <button>Click here to go back to home page</button>
+  </a>
     </body>
 </html>

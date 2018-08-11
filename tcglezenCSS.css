@@ -1,49 +1,37 @@
 * {
 	text-align: center;
 }
-
 body {
 	background-color : AliceBlue;
 }
-
-.header-container { 
-	position: fixed; 
-	top: 0; 
+.header-container {
+	position: fixed;
+	top: 0;
 	left: 0;
-	
 	width: 100%;
 	font-size: 150%;
-	
-	background-color: rgb(0, 0, 0); 
-	
+	background-color: rgb(0, 0, 0);
 	color: rgb(255, 0, 0);
 	text-align: left;
 }
-
-.topics { 
+.topics {
 	padding-top: 5px;
 }
-
-#header-padding { 
-
-	padding: 5px; 
-} 
-
-.header-item { 
-	display: inline; 
-	padding-right: 10px; 
-	text-align: left;; 
+#header-padding {
+	padding: 5px;
 }
-
+.header-item {
+	display: inline;
+	padding-right: 10px;
+	text-align: left;;
+}
 .picLinks {
 	padding: 10px;
 }
-
 a {
     text-decoration: none;
 }
-
 	a:link {color: #F60;}
 	a:visited {color: #900;}
-	a:hover {color: #F33;} 
+	a:hover {color: #F33;}
 	a:active {color:#B2F511;}
