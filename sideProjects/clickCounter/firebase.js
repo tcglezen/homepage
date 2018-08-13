@@ -36,8 +36,8 @@ function resetClick() {
 }
 
 function updateClickDisplay(clickDisplay) {
-  firebase.database().ref('countClick').once('value').then(function(snapshot) {
-    clickDisplay.innerHTML = snapshot.val();
+  firebase.database().ref('countClick').on('value', function(dataSnapshot) {
+    clickDisplay.innerHTML = dataSnapshot.val();
   });
 }
 

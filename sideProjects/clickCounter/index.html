@@ -13,7 +13,7 @@
       <script>
       const handleDisplay = function() {
         const clickDisplay = document.getElementById('countedClicks');
-        //incrClick();
+        incrClick();
         updateClickDisplay(clickDisplay);
       }
       </script>
@@ -28,10 +28,12 @@
 
   <p>Let's see how many clicks you guys are willing to put in!</p>
   <!--<button onClick="document.getElementById('countedClicks').innerHTML = updaty()">Show me the Clicks!</button><br>-->
-  <button onClick=handleDisplay()>Show me the Clicks!</button><br>
+  <button onClick=handleDisplay()>Increase the Number of Clicks!</button><br>
 
+<!--
   <p>Increment the number of clicks!</p>
   <button onclick="incrClick()">Increase Number of Clicks!</button>
+-->
 
   <p>(Before some asshole resets the number of clicks back to 0)</p>
   <button onclick="document.getElementById('countedClicks').innerHTML = resetClick()">Reset it back to zero!</button>
