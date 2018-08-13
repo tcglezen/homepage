@@ -5,10 +5,18 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="firebase.js"></script>
+
     </head>
 
     <body style="background-color:aliceblue; text-align:center;">
 
+      <script>
+      const handleDisplay = function() {
+        const clickDisplay = document.getElementById('countedClicks');
+        //incrClick();
+        updateClickDisplay(clickDisplay);
+      }
+      </script>
     <h1>Intro!</h1>
 
     <p>This is a random thing that I have been working on!<br>
@@ -16,13 +24,14 @@
       Where it holds one entire value! (countClick)<br>
       And then the users can increase it, reset it to zero, and view it!</p>
 
-  <p id = 'countedClicks'>Change me</p>
+  <p id='countedClicks'>Change me</p>
 
   <p>Let's see how many clicks you guys are willing to put in!</p>
-  <button onclick="document.getElementById('countedClicks').innerHTML = getClick()">Show me the Clicks!</button><br>
+  <!--<button onClick="document.getElementById('countedClicks').innerHTML = updaty()">Show me the Clicks!</button><br>-->
+  <button onClick=handleDisplay()>Show me the Clicks!</button><br>
 
   <p>Increment the number of clicks!</p>
-  <button onclick="document.getElementById('countedClicks').innerHTML = incrClick()">Increase Number of Clicks!</button>
+  <button onclick="incrClick()">Increase Number of Clicks!</button>
 
   <p>(Before some asshole resets the number of clicks back to 0)</p>
   <button onclick="document.getElementById('countedClicks').innerHTML = resetClick()">Reset it back to zero!</button>
