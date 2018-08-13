@@ -3,9 +3,12 @@
     <head>
       <title>Bunnies, Cats, and Dogs</title>
       <!-- The style sheet disappeaered... wtf -->
-	  <link rel="stylesheet" href="cdStyle.css">
-	  <!--<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>-->
+	  <!--<link rel="stylesheet" href="cdStyle.css">-->
+
     <script src="functions.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="firebase.js"></script>
     </head>
 
     <body style="background-color:aliceblue; text-align:center;">
@@ -21,6 +24,7 @@
 = 'Pictures/dog'+newRand(7)+'.jpg'">Dog Picture!</button>
 	<button onclick="document.getElementById('pet picture').src
 = 'Pictures/bunny'+newRand(1)+'.jpg'">Bunny Picture!</button><br><br><br>
+
 	<img src="Pictures/cat1.jpg" alt ="Pls send pictures of your pets."
 	id="pet picture" height="500">
 	<br><br>
@@ -28,5 +32,6 @@
 	<a href="http://www.tcglezen.com">
 	  <button>Click here to go back to home page</button>
   </a>
+  <hr>
     </body>
 </html>
