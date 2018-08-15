@@ -29,21 +29,21 @@ firebase.functions() - cloud functions
 //Warning: There is conflict between using both set and transaction
 
 function resetClick() {
-  firebase.database().ref().set({
+  firebase.database().ref('click').set({
   	countClick: 0
   });
   return 0;
 }
 
 function updateClickDisplay(clickDisplay) {
-  firebase.database().ref('countClick').on('value', function(dataSnapshot) {
+  firebase.database().ref('click/countClick').on('value', function(dataSnapshot) {
     clickDisplay.innerHTML = dataSnapshot.val();
   });
 }
 
 //https://firebase.google.com/docs/reference/node/firebase.database.Reference#transaction
 function incrClick() {
-    firebase.database().ref('countClick').transaction(function(numClick) {
+    firebase.database().ref('click/countClick').transaction(function(numClick) {
       return numClick + 1;
     });
 }

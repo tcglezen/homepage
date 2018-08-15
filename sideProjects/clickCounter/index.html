@@ -4,7 +4,7 @@
       <title>Click Counter</title>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-    <script src="firebase.js"></script>
+    <script src="firebaseClick.js"></script>
 
     </head>
 
@@ -17,14 +17,22 @@
         updateClickDisplay(clickDisplay);
       }
       </script>
-    <h1>Intro!</h1>
+
+      <script>
+      function load()  {
+          updateClickDisplay(document.getElementById("countedClicks"));
+      }
+        window.onload = load;
+      </script>
+
+    <h1>Super Buggy Count Clicker!</h1>
 
     <p>This is a random thing that I have been working on!<br>
       What happens is that there is this magical thing (database)<br>
       Where it holds one entire value! (countClick)<br>
       And then the users can increase it, reset it to zero, and view it!</p>
 
-  <p id='countedClicks'>Change me</p>
+  <p id='countedClicks'></p>
 
   <p>Let's see how many clicks you guys are willing to put in!</p>
   <!--<button onClick="document.getElementById('countedClicks').innerHTML = updaty()">Show me the Clicks!</button><br>-->
