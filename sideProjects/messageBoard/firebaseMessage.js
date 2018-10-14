@@ -1,5 +1,5 @@
 //const firebase = require('firebase');
-  // Initialize Firebase
+// Initialize Firebase
 const config = {
   apiKey: "AIzaSyDHsjQhhZApTOlN_0tC8-9D0AV7RfGZeu0",
   authDomain: "tglezen-9114.firebaseapp.com",
@@ -29,7 +29,7 @@ function superFunction() {
   writeFunction();
   startLoad();
   //readFunction(messageCount);
-  //displayAll(messageList);
+  //displayAll();
 }
 
 /*
@@ -54,15 +54,15 @@ function writeFunction() {
 }
 
 function clearDisplay() {
-  for(i = 0; i < displayCount; i++) {
+  for (i = 0; i < displayCount; i++) {
     document.getElementById('div' + String(i)).remove();
   }
 }
 
 //Pushes values via key list into personal list
 function readFunction(index) {
-  tempLoc = firebase.database().ref('message/'+messageKeys[index]);
-  tempLoc.once('value', function (snapshot) {
+  tempLoc = firebase.database().ref('message/' + messageKeys[index]);
+  tempLoc.once('value', function(snapshot) {
     tempMessage = snapshot.val();
     messageList.push(tempMessage);
   });
@@ -91,11 +91,13 @@ function singleDisplay(divNum, messy) {
   document.getElementById('messageList').appendChild(d);
 }
 
-function displayAll(mList){
-  for (i = 0; i < mList.length; i++) {
-    singleDisplay(i, mList[i]);
+function displayAll() {
+  displayCount = messageList.length;
+
+  for (i = 0; i < displayCount; i++) {
+    singleDisplay(i, messageList[i]);
   }
-  displayCount = mList.length;
+
 }
 
 //.key() should get the key value, similar to .key
@@ -107,20 +109,22 @@ function startLoad() {
 
   var mainRef = firebase.database().ref('message')
   mainRef.once('value', (snapshot) => {
-    snapshot.forEach((item) => {
-      messageKeys.push(item.key);
-    })
-    messageKeys.forEach((key, i) => {
-      readFunction(i);
-    })
-  })
-/*  }).then(() => {
+      snapshot.forEach((item) => {
+        messageKeys.push(item.key);
+      })
+      //Consider passing in dummy variable of messageKeys
+    }).then(() => {
       messageCount = messageKeys.length;
       for (i = 0; i < messageCount; i++) {
         readFunction(i);
-      }*/
+      }
+      setTimeout(displayAll(), 5000);
+
+
+    })
+    //pass in a complete version of all of the keys
     .then(() => {
-      console.log(messageList);
-      displayAll(messageList);
+      //console.log(messageList);
+      //displayAll();
     });
 }
