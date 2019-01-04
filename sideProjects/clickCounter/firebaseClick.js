@@ -21,13 +21,6 @@ firebase.messaging() - cloud messaging
 firebase.functions() - cloud functions
 */
 
-//function vs => (its kinda like var = var +1 and var +=1)
-//function can refer to the global
-//=> finds the this pointer to the parent scope
-//(These are usually used in objects)
-
-//Warning: There is conflict between using both set and transaction
-
 function resetClick() {
   firebase.database().ref('click').set({
   	countClick: 0

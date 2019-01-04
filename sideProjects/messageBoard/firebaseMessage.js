@@ -17,7 +17,6 @@ firebase.initializeApp(config);
 //Purpose: clears messages in: data base and web document (webpage)
 function clearMessages() {
   $('.messageList').remove();
-  //$('.hi').remove();
 }
 
 function clearFunction() {
@@ -43,6 +42,7 @@ function writeFunction() {
 
 //////////////////////////////////////////////////////////
 
+//Purpose: provides the display of a single message
 function singleDisplay(divNum, messy) {
   var d = document.createElement("div");
   d.className = 'messageList';
@@ -69,7 +69,8 @@ function singleDisplay(divNum, messy) {
 
 ////////////////////////////////////////////////////////////
 
-
+//Purpose: Everytime it reads a set of messages, it
+//displays all of the messages
 function readFunction() {
 
   firebase.database().ref('message/').once('value').then(snapshot => {
@@ -80,14 +81,10 @@ function readFunction() {
         });
       });
 
-      //console.log(messages);
       clearMessages();
 
       for (index = 0; index < messages.length; index++) {
         singleDisplay(index, messages[index].key)
-        //console.log(index);
-        //console.log(messages[index].key);
         }
-
     });
 }
