@@ -11,65 +11,41 @@ const config = {
 
 firebase.initializeApp(config);
 
-var messageKeys = [];
-var tempMessage = {};
-var messageList = [];
-var messageCount = 0;
-var displayCount = 0;
 
+///////////////////////////////////////////////////////////
+
+//Purpose: clears messages in: data base and web document (webpage)
 function clearMessages() {
+  $('.messageList').remove();
+  //$('.hi').remove();
+}
+
+function clearFunction() {
   firebase.database().ref('message').set(null);
-  //clearDisplay();
-  messageKeys = [];
-  messageCount = 0;
+  clearMessages();
 }
 
-function superFunction() {
-  clearDisplay();
-  writeFunction();
-  startLoad();
-  //readFunction(messageCount);
-  //displayAll();
-}
+/////////////////////////////////////////////////////////////////
 
-/*
-The purpose of the write functions is to
-1.) Obtain the values from the text fields
-2.) Obtain the keys needed for database (and add them to list)
-*/
-
-
+//Purpose: writes the message to the data base
 function writeFunction() {
   var enteredName = document.getElementById("messageNameField")
   var enteredText = document.getElementById("messageTextField")
 
-  var tempKey = firebase.database().ref('message').push({
+  firebase.database().ref('message').push({
     name: enteredName.value,
     text: enteredText.value
-  }).key;
-  messageKeys.push(tempKey);
+  });
+
   document.getElementById('messageNameField').value = '';
   document.getElementById('messageTextField').value = '';
-  //messageCount ++;
 }
 
-function clearDisplay() {
-  for (i = 0; i < displayCount; i++) {
-    document.getElementById('div' + String(i)).remove();
-  }
-}
-
-//Pushes values via key list into personal list
-function readFunction(index) {
-  tempLoc = firebase.database().ref('message/' + messageKeys[index]);
-  tempLoc.once('value', function(snapshot) {
-    tempMessage = snapshot.val();
-    messageList.push(tempMessage);
-  });
-}
+//////////////////////////////////////////////////////////
 
 function singleDisplay(divNum, messy) {
   var d = document.createElement("div");
+  d.className = 'messageList';
   d.id = "div" + String(divNum);
 
   var pName = document.createElement('P');
@@ -91,40 +67,27 @@ function singleDisplay(divNum, messy) {
   document.getElementById('messageList').appendChild(d);
 }
 
-function displayAll() {
-  displayCount = messageList.length;
-
-  for (i = 0; i < displayCount; i++) {
-    singleDisplay(i, messageList[i]);
-  }
-
-}
-
-//.key() should get the key value, similar to .key
-function startLoad() {
-
-  messageKeys = [];
-  messageList = [];
-  messageCount = 0;
-
-  var mainRef = firebase.database().ref('message')
-  mainRef.once('value', (snapshot) => {
-      snapshot.forEach((item) => {
-        messageKeys.push(item.key);
-      })
-      //Consider passing in dummy variable of messageKeys
-    }).then(() => {
-      messageCount = messageKeys.length;
-      for (i = 0; i < messageCount; i++) {
-        readFunction(i);
-      }
-      setTimeout(displayAll(), 5000);
+////////////////////////////////////////////////////////////
 
 
-    })
-    //pass in a complete version of all of the keys
-    .then(() => {
-      //console.log(messageList);
-      //displayAll();
+function readFunction() {
+
+  firebase.database().ref('message/').once('value').then(snapshot => {
+      const messages = [];
+      snapshot.forEach(child => {
+          messages.push({
+            key: child.val()
+        });
+      });
+
+      //console.log(messages);
+      clearMessages();
+
+      for (index = 0; index < messages.length; index++) {
+        singleDisplay(index, messages[index].key)
+        //console.log(index);
+        //console.log(messages[index].key);
+        }
+
     });
 }

@@ -6,6 +6,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="firebaseMessage.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
     </head>
     <body style="background-color:aliceblue; text-align:center;">
@@ -23,20 +24,18 @@
       <p>I have no idea what I'm doing!</p> <hr>
       <p> I would like to say this is VERY buggy.</br>
         How to use?<br>
-        1.) Type a name and text <br>
-        2.) Press the super function<br>
-        3.) See everything! <br>
-        if that doesn't work, try some combination of <br>
-        display function, clear all messages, and refreshing your page.</p>
+        1.) Clear Function: clear text <br>
+        2.) Write Function: write the text<br>
+        3.) Read Function: display all of the text</p>
 
       <div id="messageList"></div>
 
       <input type="text" name="enterName" value = '' placeholder="enter name here" id = 'messageNameField'/><br>
       <input type="text" name="enterText" value = '' placeholder="enter text here" id = 'messageTextField'/><br>
 
-      <button onClick="clearMessages()">Click here to clear all messages</button><br>
-      <button onClick="superFunction()">Super Function</button><br>
-      <button onClick="displayAll()">Display Function</button>
+      <button onClick="clearFunction()">Clear Function</button><br>
+      <button onClick="writeFunction()">write Function</button><br>
+      <button onClick="readFunction()">read Function</button><br>
 
     </body>
 </html>
