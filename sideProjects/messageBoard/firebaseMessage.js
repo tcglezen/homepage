@@ -88,3 +88,12 @@ function readFunction() {
         }
     });
 }
+
+/////////////////////////////////////////////////////////
+
+//Purpose: Calls readFunction everytime there is a change to the database 
+function updateDisplay(clickDisplay) {
+  firebase.database().ref('message/').on('value', function(dataSnapshot) {
+    readFunction();
+  });
+}

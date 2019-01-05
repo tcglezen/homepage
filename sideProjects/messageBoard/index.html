@@ -13,27 +13,18 @@
 
       <script>
       function load()  {
-          readFunction();
+          updateDisplay();
 
       }
       window.onload = load;
       </script>
 
-      <script>
-      const handleDisplay = function() {
 
-        //const clickDisplay = document.getElementById('countedClicks');
-        //incrClick();
-        //updateClickDisplay(clickDisplay);
-      }
-      </script>
-
-      <h1>This is Thomas's Messanger Board!</h1><hr>
+      <h1>This is Thomas's Messanger Board!</h1>
 
         How to use?<br>
         1.) Clear Function: clear text <br>
         2.) Write Function: write the text<br>
-        3.) Read Function: display all of the text</p>
 
       <div id="messageList"></div>
 
@@ -42,7 +33,6 @@
 
       <button onClick="clearFunction()">Clear Function</button><br>
       <button onClick="writeFunction()">write Function</button><br>
-      <button onClick="readFunction()">read Function</button><br>
 
     </body>
 </html>

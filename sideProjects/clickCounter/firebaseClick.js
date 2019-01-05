@@ -40,3 +40,9 @@ function incrClick() {
       return numClick + 1;
     });
 }
+
+function handleDisplay() {
+  const clickDisplay = document.getElementById('countedClicks');
+  incrClick();
+  updateClickDisplay(clickDisplay);
+}
