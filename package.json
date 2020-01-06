@@ -4,9 +4,11 @@
   "description": "My homepage",
   "main": "server.js",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "6.13.4.4.4"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^0.6.15",
     "express": "^4.17.1",
     "firebase": "^5.11.1",
     "formidable": "^1.2.1",
