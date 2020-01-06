@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "My homepage",
   "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "firebase": "^5.11.1",
