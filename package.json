@@ -4,10 +4,10 @@
   "description": "My homepage",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.3",
-    "firebase": "^5.3.0",
+    "express": "^4.17.1",
+    "firebase": "^5.11.1",
     "formidable": "^1.2.1",
-    "nodemailer": "^4.6.7"
+    "nodemailer": "^4.7.0"
   },
   "devDependencies": {},
   "scripts": {
