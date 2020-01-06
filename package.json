@@ -5,7 +5,7 @@
   "main": "server.js",
   "engines": {
     "node": "12.x",
-    "npm": "6.13.4.4.4"
+    "npm": "6.13.4"
   },
   "dependencies": {
     "@grpc/grpc-js": "^0.6.15",
