@@ -4,7 +4,7 @@
   "description": "My homepage",
   "main": "server.js",
   "engines": {
-    "node": "12.x",
+    "node": "10.x",
     "npm": "6.13.4"
   },
   "dependencies": {
