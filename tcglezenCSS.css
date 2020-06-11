@@ -1,6 +1,3 @@
-* {
-	text-align: center;
-}
 body {
 	background-color : AliceBlue;
 }
@@ -14,17 +11,36 @@ body {
 	color: rgb(255, 0, 0);
 	text-align: left;
 }
-.topics {
-	padding-top: 5px;
-}
-#header-padding {
-	padding: 5px;
-}
 .header-item {
 	display: inline;
 	padding-right: 10px;
-	text-align: left;;
+	text-align: left;
 }
+
+#header-padding {
+	padding: 5px;
+}
+
+.left {
+	float: left;
+  width: 30%;
+}
+
+.right {
+    float:right;
+    width: 70%;
+		color: black;
+}
+
+.bottom {
+	float: none;
+	color: black;
+	clear: both;
+}
+
+
+
+
 .picLinks {
 	padding: 10px;
 }
@@ -32,6 +48,6 @@ a {
     text-decoration: none;
 }
 	a:link {color: #F60;}
-	a:visited {color: #900;}
+	a:visited {color: #F0F0F0;}
 	a:hover {color: #F33;}
 	a:active {color:#B2F511;}
