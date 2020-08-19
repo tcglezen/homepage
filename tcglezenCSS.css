@@ -23,13 +23,18 @@ body {
 
 .left {
 	float: left;
-  width: 30%;
+  width: 25%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .right {
     float:right;
-    width: 70%;
+    width: 65%;
 		color: black;
+
+		padding-left: 10px;
+		padding-right: 10px;
 }
 
 .bottom {
@@ -48,6 +53,6 @@ a {
     text-decoration: none;
 }
 	a:link {color: #F60;}
-	a:visited {color: #F0F0F0;}
+	a:visited {color: #CC2903;}
 	a:hover {color: #F33;}
 	a:active {color:#B2F511;}
