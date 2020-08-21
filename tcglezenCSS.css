@@ -23,9 +23,10 @@ body {
 
 .left {
 	float: left;
-  width: 25%;
-	padding-left: 10px;
-	padding-right: 10px;
+  width: 30%;
+	padding-left: 100px;
+	padding-right: 50px;
+	padding-top: 50px;
 }
 
 .right {
@@ -33,14 +34,9 @@ body {
     width: 65%;
 		color: black;
 
-		padding-left: 10px;
-		padding-right: 10px;
-}
-
-.bottom {
-	float: none;
-	color: black;
-	clear: both;
+		padding-left: 50px;
+		padding-right: 100px;
+		padding-top: 50px;
 }
 
 
