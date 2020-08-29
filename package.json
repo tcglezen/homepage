@@ -8,10 +8,10 @@
     "npm": "6.13.4"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^0.6.15",
+    "@grpc/grpc-js": "^0.6.18",
     "express": "^4.17.1",
     "firebase": "^5.11.1",
-    "formidable": "^1.2.1",
+    "formidable": "^1.2.2",
     "nodemailer": "^4.7.0"
   },
   "devDependencies": {},
