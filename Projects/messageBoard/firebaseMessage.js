@@ -28,15 +28,12 @@ function clearFunction() {
 
 //Purpose: writes the message to the data base
 function writeFunction() {
-  var enteredName = document.getElementById("messageNameField")
   var enteredText = document.getElementById("messageTextField")
 
   firebase.database().ref('message').push({
-    name: enteredName.value,
     text: enteredText.value
   });
 
-  document.getElementById('messageNameField').value = '';
   document.getElementById('messageTextField').value = '';
 }
 
@@ -48,19 +45,14 @@ function singleDisplay(divNum, messy) {
   d.className = 'messageList';
   d.id = "div" + String(divNum);
 
-  var pName = document.createElement('P');
-  pName.id = 'name';
   var pText = document.createElement('P');
   pText.id = 'text';
   var hrTag = document.createElement('hr');
 
-  pNameInner = document.createTextNode(messy.name);
   pTextInner = document.createTextNode(messy.text);
 
-  pName.appendChild(pNameInner);
   pText.appendChild(pTextInner);
 
-  d.appendChild(pName);
   d.appendChild(pText);
   d.appendChild(hrTag);
 
@@ -91,7 +83,7 @@ function readFunction() {
 
 /////////////////////////////////////////////////////////
 
-//Purpose: Calls readFunction everytime there is a change to the database 
+//Purpose: Calls readFunction everytime there is a change to the database
 function updateDisplay(clickDisplay) {
   firebase.database().ref('message/').on('value', function(dataSnapshot) {
     readFunction();
