@@ -24,18 +24,16 @@ body {
 .left {
 	float: left;
   width: 30%;
-	padding-left: 100px;
-	padding-right: 50px;
+	padding-left: 4%;
 	padding-top: 50px;
 }
 
 .right {
     float:right;
-    width: 65%;
+    width: 60%;
 		color: black;
 
-		padding-left: 50px;
-		padding-right: 100px;
+		padding-right: 4%;
 		padding-top: 50px;
 }
 
