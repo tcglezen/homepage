@@ -8,7 +8,7 @@
     "npm": "6.13.4"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^0.6.18",
+    "@grpc/grpc-js": "^1.1.8",
     "express": "^4.17.3",
     "firebase": "^5.11.1",
     "formidable": "^1.2.2",
