@@ -12,7 +12,7 @@
     "@grpc/grpc-js": "^1.1.8",
     "firebase": "^5.11.1",
     "formidable": "^1.2.2",
-    "nodemailer": "^4.7.0"
+    "nodemailer": "^6.9.9"
   },
   "devDependencies": {},
   "scripts": {
