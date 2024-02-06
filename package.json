@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@grpc/grpc-js": "^0.6.18",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase": "^5.11.1",
     "formidable": "^1.2.2",
     "nodemailer": "^4.7.0"
